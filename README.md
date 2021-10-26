@@ -1,4 +1,4 @@
-# dwarf-vue
+# MyThik-vue
 
 ## Project setup
 ```

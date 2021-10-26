@@ -3,32 +3,17 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="../assets/img/logo.png" alt="Dwarf Space Force" /></a>
+                <a class="navbar-brand" href="#page-top"><img src="../assets/img/logo.png" alt="MyThik" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0 text-center">
                         <li class="nav-item"><a class="nav-link" href="#services">Story</a></li>
                         <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#collection">Dwarf Force</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#post-drop">Post Drop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#faq">Faq</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     </ul>
                 </div>
-
-                <a class="ml-5 btn btn-primary btn-xl p-3 text-uppercase bow btn-radius prim-bg sec btn-connect" @click="connect()" v-html="account ? '..'+account.substring(account.length - 4) : 'Connect'"></a>
-                <a class="ml-5 btn btn-primary btn-xl p-3 text-uppercase bow btn-radius prim-bg sec btn-connect" v-if="account" href="#inviteModal" data-bs-toggle="modal">INVITE</a>
-               
-                <export-excel class="ml-5 btn btn-primary btn-xl text-uppercase bow btn-radius prim-bg sec btn-connect" 
-                    :data="json_data" @click="excel()" worksheet="My Worksheet" name="DSF_statistics.xls" 
-                    v-if="account===this.ownerWalletAddress">
-                    SPREADSHEET                
-                </export-excel>                
-                <a class="ml-5 btn btn-primary btn-xl text-uppercase btn-price-set" v-if="account && parseInt(ownerWalletAddress) == account"  href="#setPriceModal" data-bs-toggle="modal">$</a>
-                <a class="ml-5 btn btn-primary btn-xl text-uppercase btn-price-set" v-if="account"  href="#setPriceModal" data-bs-toggle="modal">$</a>
             </div>
         </nav>
        
@@ -53,7 +38,7 @@
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading sec">DWARF SPACE FORCE 1st Edition</h2>
+                    <h2 class="section-heading sec">MyThik 1st Edition</h2>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-10 mx-auto">
@@ -76,7 +61,7 @@
                         <div class="col-md-6">
                             <h4 class="sec bow">Spec</h4>
 
-                            <p class="story-text"><span class="story-bigger-text">A</span>ll 10 000 DWARF SPACE FORCE are unique and have their own temper. We have achieved this by making over 220 separate attributes that when combined produce magnificent looking Dwarfs which all possess their own character.</p>
+                            <p class="story-text"><span class="story-bigger-text">A</span>ll 10 000 MyThik are unique and have their own temper. We have achieved this by making over 220 separate attributes that when combined produce magnificent looking Dwarfs which all possess their own character.</p>
 
                             <p class="story-text"><span class="story-bigger-text">W</span>e wanted to add some ruggeredness to the NFT space and took inspiration from our love of
                                 the most loyal, strong, fearless and committed characters in all of fantasy.</p>
@@ -87,7 +72,7 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <h4 class="sec bow">WHY WOULD I BUY A DWARF SPACE FORCE?</h4>
+                            <h4 class="sec bow">WHY WOULD I BUY A MyThik?</h4>
                                 <h4 class="subheading prim bow">When it comes to NFTs there are a few things you want to keep in mind.</h4>
                                 <p class="story-text"><span class="story-bigger-text">One.</span> Is the art good? This is a piece of art. It is hand drawn by an artist who may one day
                                     become very famous. We work with young aspiring artists and in the future you may be holding
@@ -107,7 +92,7 @@
                     <div class="row" id="connectAndMint">
                         <div class="col-md-4">
                                 <h4 class="prim bow">Fair Distribution</h4>
-                                <p class="story-text">Dwarf Space Force Edition NFT costs {{ nftPrice() }}. There are no price tiers; Dwarf Space Force membership costs the same for everyone.</p>
+                                <p class="story-text">MyThik Edition NFT costs {{ nftPrice() }}. There are no price tiers; MyThik membership costs the same for everyone.</p>
                         </div>
 
                         <div class="col-md-8 d-flex justify-content-end" v-if="soldOut">
@@ -212,14 +197,14 @@
                         <h2 class="roadmap-heading">1000</h2>
                     </div>
                     <div class="col-md-6 my-auto">
-                        <span class="roadmap-subheading">1000 DWARF SPACE FORCE</span>
+                        <span class="roadmap-subheading">1000 MyThik</span>
                         <span class="roadmap-paragraph">10% - 1 MATIC giveaway to one NFT owner between NFT # 1 and 1000.</span>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 my-auto">
-                        <span class="roadmap-subheading">2500 DWARF SPACE FORCE</span>
+                        <span class="roadmap-subheading">2500 MyThik</span>
                         <span class="roadmap-paragraph">25% - 1 MATIC giveaway to one NFT owner between NFT # 1 and 2500.</span>
                     </div>
                     <div class="col-md-6">
@@ -232,14 +217,14 @@
                         <h2 class="roadmap-heading">5000</h2>
                     </div>
                     <div class="col-md-6 my-auto">
-                        <span class="roadmap-subheading">5000 DWARF SPACE FORCE</span>
+                        <span class="roadmap-subheading">5000 MyThik</span>
                         <span class="roadmap-paragraph">50% - 1 MATIC giveaway to one NFT owner between NFT # 1 and 5000.</span>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 my-auto">
-                        <span class="roadmap-subheading">7500 DWARF SPACE FORCE</span>
+                        <span class="roadmap-subheading">7500 MyThik</span>
                         <span class="roadmap-paragraph">75% - 1 MATIC giveaway to one NFT owner between NFT # 1 and 7500.</span>
                     </div>
                     <div class="col-md-6">
@@ -252,7 +237,7 @@
                         <h2 class="roadmap-heading">10000</h2>
                     </div>
                     <div class="col-md-6 my-auto">
-                        <span class="roadmap-subheading">10000 DWARF SPACE FORCE (SOLD OUT)</span>
+                        <span class="roadmap-subheading">10000 MyThik (SOLD OUT)</span>
                         <span class="roadmap-paragraph">100% - 1 MATIC giveaway to one NFT owner between NFT # 1 and 10000.</span>
                     </div>
                 </div>
@@ -348,7 +333,7 @@
                     <li class="timeline-inverted">
                         <div class="timeline-image"><span>6</span></div>
                         <div class="timeline-panel">
-                            <div class="timeline-body"><p class="story-text">Build a DWARF SPACE FORCE tavern for drinking, eating and celebrating together, in the Metaverse.</p></div>
+                            <div class="timeline-body"><p class="story-text">Build a MyThik tavern for drinking, eating and celebrating together, in the Metaverse.</p></div>
                         </div>
                     </li>
                 </ul>
@@ -356,7 +341,7 @@
                 <div class="row mt-5 mb-5">
                     <div class="col-lg-6 mx-auto">
                         <p class="story-text">
-                            <b class="sec">"DWARF SPACE FORCE NFTs are not just a rare piece of art. They are also a living evolving being in the digital Metaverse."</b> 0ld3ULL CMO at Branda3ULL.
+                            <b class="sec">"MyThik NFTs are not just a rare piece of art. They are also a living evolving being in the digital Metaverse."</b> 0ld3ULL CMO at Branda3ULL.
                         </p>
                         <p class="story-text">Each member of our community will be part of an exclusive elite whose benefits and offerings will only increase over time.</p>
                     </div>
@@ -432,7 +417,7 @@
                                 </div>
                                 <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3" data-bs-parent="#accordion">
                                     <div class="card-body">
-                                        <p>Purchasing a DWARF SPACE FORCE NFT costs {{ nftPrice() }} + gas fee. One hour before the
+                                        <p>Purchasing a MyThik NFT costs {{ nftPrice() }} + gas fee. One hour before the
                                             Minting we will release the MATIC Price so if you are minting from contract you have it available.
                                             There is no bonding curve!</p>
                                     </div>
